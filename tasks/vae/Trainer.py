@@ -22,7 +22,8 @@ class Trainer():
 
         self.train_loader = train_loader
         self.test_loader = test_loader
-        self.n_obs = dataset.column_count
+        #self.n_obs = dataset.column_count
+        self.n_obs = train_loader.dataset.tensors[0].data.shape[1];
         print(self.n_obs)
         self.model = VAE(self.n_obs).to(self.device)
         self.optimizer = optim.Adam(self.model.parameters(), lr=1e-3)
