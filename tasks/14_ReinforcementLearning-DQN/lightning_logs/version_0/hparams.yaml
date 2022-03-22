@@ -1,0 +1,12 @@
+batch_size: 16
+env: CartPole-v0
+episode_length: 450
+eps_end: 0.01
+eps_last_frame: 100000
+eps_start: 1.0
+gamma: 0.99
+lr: 0.01
+replay_size: 100000
+sync_rate: 1000
+warm_start_size: 10000
+warm_start_steps: 10000
